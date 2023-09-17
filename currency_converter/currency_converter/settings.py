@@ -60,7 +60,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'currency_converter',
         'USER': 'postgres',         
-         'PASSWORD': 'barselona1933',
+         'PASSWORD': 'postgres',
          'HOST': 'db',     
          'PORT': '5432',   
      }
