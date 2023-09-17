@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+  web:
+    # image: docker-django-v0.0:latest
+    build: .
+    command: python currency_converter/manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+  db:
+    image: postgres:14
+    environment:
+      POSTGRES_DB: currency_converter
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: barselona1933
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+
+volumes:
+  pgdata:
