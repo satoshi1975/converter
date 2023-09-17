@@ -15,7 +15,7 @@ services:
     environment:
       POSTGRES_DB: currency_converter
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: barselona1933
+      POSTGRES_PASSWORD: postgres
     ports:
       - "5432:5432"
     volumes:
